@@ -5,17 +5,17 @@
 	"name": "Yawn",
 	"description": "a silly little camera tool mod i made cuz i couldnt find any mods with needed me functions",
 	"authors": [
-		" (t.me/BigPogchamp)"
+		"mimi (t.me/BigPogchamp)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://t.me/BigPogchamp",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "EEP-0.1",
+	"license": "EEP-0.0.0.0.1",
 	"icon": "assets/yawn/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
+		"client": [
 			"net.yawn.Yawn"
 		],
 		"fabric-datagen": [
