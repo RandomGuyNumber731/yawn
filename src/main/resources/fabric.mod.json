@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "yawn",
+	"version": "${version}",
+	"name": "Yawn",
+	"description": "a silly little camera tool mod i made cuz i couldnt find any mods with needed me functions",
+	"authors": [
+		" (t.me/BigPogchamp)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "EEP-0.1",
+	"icon": "assets/yawn/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yawn.Yawn"
+		],
+		"fabric-datagen": [
+			"net.yawn.YawnDataGenerator"
+		]
+	},
+	"mixins": [
+		"yawn.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+}

@@ -1,0 +1,8 @@
+{
+  "key.yawn.lock_yaw": "Lock Yaw",
+  "key.yawn.lock_pitch": "Lock Pitch",
+  "key.yawn.lock_both": "Lock Both",
+  "key.yawn.toggle_notification": "Toggle Notification Type",
+  "key.yawn.clear_locks": "Clear Locks",
+  "category.yawn": "Yawn"
+}
