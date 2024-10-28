@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://t.me/BigPogchamp",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/RandomGuyNumber731/yawn"
 	},
 	"license": "EEP-0.0.0.0.1",
 	"icon": "assets/yawn/icon.png",
@@ -30,5 +30,5 @@
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
+	}
 }

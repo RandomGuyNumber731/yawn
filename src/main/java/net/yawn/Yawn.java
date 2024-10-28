@@ -31,23 +31,23 @@ public class Yawn implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		// Register key bindings
+
 		yawKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key.yawn.lock_yaw",
+				"key.yawn.yaw",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_Y,
 				"category.yawn"
 		));
 
 		pitchKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key.yawn.lock_pitch",
+				"key.yawn.pitch",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_P,
 				"category.yawn"
 		));
 
 		bothKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key.yawn.lock_both",
+				"key.yawn.both",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_B,
 				"category.yawn"
@@ -61,7 +61,7 @@ public class Yawn implements ClientModInitializer {
 		));
 
 		toggleKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key.yawn.toggle_notification",
+				"key.yawn.toggle",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_N,
 				"category.yawn"
@@ -71,7 +71,13 @@ public class Yawn implements ClientModInitializer {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (client.player != null) {
 				handleKeyPresses(client);
-			}
+            }
+		    if (isYaw) {
+			    client.player.setYaw(yaw);
+		    }
+		    if (isPitch) {
+		    	client.player.setPitch(pitch);
+		    }
 		});
 	}
 
@@ -115,14 +121,6 @@ public class Yawn implements ClientModInitializer {
 				case TOAST -> NotificationType.DISABLED;
 			};
 			showNotification(client, "Notification Type: " + notificationType);
-		}
-
-		// Lock the camera angles
-		if (isYaw) {
-			client.player.setYaw(yaw);
-		}
-		if (isPitch) {
-			client.player.setPitch(pitch);
 		}
 	}
 
